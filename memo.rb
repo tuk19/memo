@@ -34,7 +34,7 @@ if input_num == 1 || input_num == 2 then
     csv_file = input_file + ".csv"
     puts("メモしたい内容を記入してください")
     puts("完了したら「Ctrl+D」を押します")
-    input_text = readlines
+    input_text = readlines.map(&:chomp)
     operation_csv(input_num, csv_file, input_text)
 else
     puts("1か2以外が入力されました。")
